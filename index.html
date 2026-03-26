@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>櫻木高校的告白大作戰</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 封面/首頁 -->
+        <div id="home-screen" class="screen">
+            <h1 class="title">🌸 櫻木高校的告白大作戰</h1>
+            <div class="intro-box">
+                <p>今天是高中的最後一個學期。你決定在畢業前，向暗戀了三年的青梅竹馬——小晴，傳達你的心意。</p>
+                <br>
+                <p>你的選擇將決定這段青春的最終結局！</p>
+            </div>
+            <button id="start-btn" class="primary-btn">開始故事</button>
+        </div>
+
+        <!-- 故事畫面 -->
+        <div id="story-screen" class="screen hidden">
+            <div class="progress-bar">
+                <span id="progress-text">劇情進度：場景 1</span>
+            </div>
+            <div class="card">
+                <p id="story-text">故事內容載入中...</p>
+            </div>
+            <div id="choices-container" class="choices-box">
+                <!-- 選項按鈕會由 JS 動態生成 -->
+            </div>
+        </div>
+
+        <!-- 結局畫面 -->
+        <div id="ending-screen" class="screen hidden">
+            <h2 id="ending-title" class="title">結局標題</h2>
+            <div class="card ending-card">
+                <p id="ending-text">結局描述...</p>
+            </div>
+            <button id="restart-btn" class="primary-btn">重新開始故事</button>
+        </div>
+    </div>
+
+    <!-- 櫻花飄落用的 canvas 背景 -->
+    <canvas id="cherry-blossom-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
